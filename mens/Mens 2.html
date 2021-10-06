@@ -1,0 +1,815 @@
+<html>
+
+<head>
+    <title>Glacious Garments</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css.map">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="bootstrap.bundle.min.js.map"></script>
+</head>
+<style>
+    .navbar-brand {
+        margin-right: 400px;
+        margin-top: 5px;
+    }
+    
+    .navbar-nav {
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+    
+    .dropdown-menu {
+        background-color: transparent;
+    }
+    
+    .navbar-text {
+        margin-right: 10px;
+    }
+    
+    .navbar-text h3 {
+        color: rgba(12, 11, 11, 0.884);
+        font-size: 50px;
+    }
+    
+    footer {
+        margin-top: 90px;
+    }
+    
+    footer .container-fluid {
+        background-color: black;
+        background-position: center;
+        background-size: cover;
+        opacity: 0.9;
+    }
+    
+    footer .container-fluid .row .col-sm h2 {
+        color: cornsilk;
+    }
+    
+    footer .container-fluid .row .col-sm h6 {
+        color: cornsilk;
+    }
+    
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        background-color: black;
+    }
+    
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: None;
+        font-size: 20px;
+        color: white;
+        display: block;
+        line-height: 70px;
+    }
+    
+    .sidenav a:hover {
+        color: aqua;
+    }
+    
+    .sidenav .closebtn {
+        position: absolute;
+        top: 30;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+    
+    .carousel .carousel-inner .carousel-item img {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    nav {
+        border-bottom-width: thin;
+        border-bottom-style: solid;
+        border-color: rgba(0, 0, 0, 0.06);
+    }
+    
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        opacity: 0;
+        transition: .5s ease-out;
+        background-color: transparent;
+    }
+    
+    .card:hover .overlay {
+        opacity: 1;
+    }
+    
+    .col-sm-3 {
+        margin-top: 50px;
+    }
+    
+    .nav-tabs .nav-item a {
+        font-family: 'Original Surfer', sans-serif;
+        font-size: 23px;
+    }
+    
+    .nav-tabs .nav-item a:hover {
+        background: rgba(34, 25, 25, 0.2);
+    }
+    
+    .nav-tabs .nav-item a:active {
+        background: rgba(34, 25, 25, 0.2);
+    }
+    
+    .container-fluid h1 {
+        color: rgb(95, 140, 160);
+        text-align: center;
+        margin-top: 1in;
+        font-size: 100px;
+        font-family: 'Orelega One', sans-serif;
+    }
+</style>
+
+<body>
+    <div id="mysidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Help@FAQs</a>
+        <a href="#">My Account</a>
+        <a href="#">My Cart</a>
+        <a href="#">My Orders</a>
+        <a href="#">Our Shop</a>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mysidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mysidenav").style.width = "0";
+        }
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <span style="font-size:20px;cursor:pointer;margin-left: -55px;" onclick="openNav()">&#9776;</span>
+            <a class="navbar-brand" href="#">
+                <h4><b>Glacious</b> Garments</h4>
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="Project Web.html" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" style="cursor: pointer;" href="Mens.html">Men's Brand</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Mens.html">Junaid Jumshed</a>
+                        <a class="dropdown-item" href="Mens bonanza.html">Bonanza</a>
+                        <a class="dropdown-item" href="Mens Nike.html">Nike</a>
+                        <a class="dropdown-item" href="Mens levis.html">Levis</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" style="cursor: pointer;">Women's Brand</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Womens.html">Bonanza Satrangi</a>
+                        <a class="dropdown-item" href="Womens khaadi.html">Khaadi</a>
+                        <a class="dropdown-item" href="Womens gul ahmed.html">GulAhmed</a>
+                        <a class="dropdown-item" href="Womens Alkaram.html">AlKaram</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" style="cursor: pointer;">Kid's Brand</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Kids.html">Minnie Minors</a>
+                        <a class="dropdown-item" href="Kids cherryberry.html">CherryBerry</a>
+                        <a class="dropdown-item" href="Kids cocobee.html">Cocobee</a>
+                        <a class="dropdown-item" href="Kids Rollover.html">Rollover Kids</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <h1>Men's Collection</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="navbar navbar-expand-lg navbar-light justify-content-center">
+            <ul class="navbar-nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" style="background-color:rgba(109, 107, 107, 0.76);" href="Mens.html"><img src="j.png"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Mens bonanza.html"><img src="bonanza.png"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Mens Nike.html"><img src="Nike.png"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Mens levis.html"><img src="levis.jpg"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="margin-top: 110px; margin-bottom: 50px;">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#all_products">All Products</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#shalwar_kameez">Shalwar Kameez</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#kurta">Kurta</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#shalwar_suits">Shalwar Suit</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#unstitched">Unstitched</a></li>
+        </ul>
+
+        <div class="tab-content" style="margin-top: 50px; margin-bottom: 100px;">
+            <div id="all_products" class="container tab-pane active">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="Shalwar Kameez2.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="Shalwar Kameez2.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="32451_1_.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="32451_1_.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="shalwar kameez3.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="shalwar kameez3.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="shalwar kameez4.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="shalwar kameez4.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="shalwar kameez5.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="shalwar kameez5.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="Shalwar Kameez6.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="Shalwar Kameez6.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="Shalwar Kameez7.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="Shalwar Kameez7.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="Shalwar Kameez.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="Shalwar Kameez.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="j5.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="j5.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="j2.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="j2.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="j3.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="j3.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="j4.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="j4.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="j5.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="abchl.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat2.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="waistcoat2.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat3.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="waistcoat3.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat4.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="waistcoat4.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="shlwar suit.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="shlwar suit.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat6.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="waistcoat6.jpg"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat_5.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="waistcoat_5.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat7.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="waistcoat7.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat8.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><a href="waistcoat8.jpg.html"><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="shalwar_kameez" class="container tab-pane fade">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="Shalwar Kameez2.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="32451_1_.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="shalwar kameez3.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="shalwar kameez4.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="shalwar kameez5.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="Shalwar Kameez6.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="Shalwar Kameez7.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="Shalwar Kameez.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="kurta" class="container tab-pane fade">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="j5.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="j2.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="j3.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="j4.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="j5.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="j6.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="j6.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="shalwar_suits" class="container tab-pane fade">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat2.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat3.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat4.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="shlwar suit.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat6.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat_5.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat7.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="waistcoat8.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="unstitched" class="container tab-pane fade">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="unstitched1.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="unstitched2.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="unstitched3.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="unstitched4.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card" style="background-color: white;box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);" onMouseOver="this.style.boxShadow='3px 3px 5px 6px #ccc'" onMouseOut="this.style.boxShadow='0 1px 2px rgba(34, 25, 25, 0.4)'">
+                            <img class="card-image-top" src="unstitched5.jpg" style="width: 100%; height: 350px; overflow: hidden;">
+                            <div class="card-text" style="margin-left: 10px;">
+                                <h4 style="font-family: 'Slabo 27px', serif; opacity: 0.9; font-size: 23px">Men's</h4>
+                                <h5 style="font-family:'Ubuntu';opacity: 0.8; font:size 18px;">Shalwar Kameez</h5>
+                                <br><button class="btn btn-dark" style="color:white; width:5cm; margin-left: 20px; margin-bottom:8px;">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm">
+                    <h2><b>Catagories</b></h2>
+                    <a href="#" class="nav-link">
+                        <h5>Mens</h5>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <h5>Womens</h5>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <h5>Kids</h5>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <h5>Accesories</h5>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    <h2><b>Help</b></h2>
+                    <a href="#" class="nav-link">
+                        <h5>Track Order</h5>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <h5>Returns</h5>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <h5>Shippings</h5>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <h5>FAQs</h5>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    <h2><b>News Letter</b></h2>
+                    <h6><u>mustafahasnain19@gmail.com</u></h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        var s = $(window).scrollTop();
+        if(s >300){
+          $("#nav").css("background-color","rgba(255, 251, 251, 0.952)");
+          $("#nav").css("transition","all 0.5s");
+        }
+        else{
+          $("#nav").css("background-color", "transparent");
+        }
+      })
+    })
+</script>
+</html>

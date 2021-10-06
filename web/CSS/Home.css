@@ -1,0 +1,349 @@
+.navbar-brand{
+    margin-right: 400px;
+    margin-top: 5px;
+  }
+.navbar-brand h4{
+font-family: 'Lobster', cursive;
+font-size: 30px;
+}
+@media only screen and (max-width: 768px){
+  .navbar-brand h4{
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    margin: 0;
+    padding-left: 60px;
+    margin-top: -40px
+    
+}
+#nav span{
+  opacity: 0;
+}
+#nav .nav-item a{
+font-size:small;  
+margin-left: 50px;
+padding-left: 60px;
+}
+#nav{
+  height: 230px;
+}
+#title-card-img-overlay h2{
+  font-size: 35px; 
+  color: white;
+  overflow: hidden;
+  font-family:'Poppins'; 
+}
+#title-card-img-overlay h4{
+  font-size: 35px; 
+  color: white;
+  overflow: hidden;
+  font-family:'Poppins'; 
+}
+.card-text .btn-dark{
+  margin-left: 90px;
+}
+}
+  body{
+ background-color: #EEE;
+} 
+  .navbar-nav{
+    margin-left: -40px;
+    margin-right: -70px;
+  }
+  #title-img{
+    font-size: 70px; 
+    font-weight: 700;
+    color: white;
+    font-family:'Poppins'; 
+  }
+  #title-card-img-overlay{
+    text-align: center; 
+    margin-top: 90px;
+  }
+  .dropdown-menu{
+  background-color:transparent;
+  }
+  .nav-tabs{
+    margin-top: 110px;
+    margin-bottom: 50px; 
+    }
+  .justify-content-center{
+    margin-top: 20px;
+    margin-bottom: 50px; 
+  }
+  .nav-link{
+  font-family: 'Poppins-Medium', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 5px 0px;
+  font-weight: 600;
+  line-height: 1.5;
+  }
+  #heading{
+    font-family:'Poppins'; 
+    font-size: 50px;
+    text-align: center; 
+    font-weight: bolder;
+  }
+  #mens{
+    margin-top:-30px;
+  }
+
+  
+  footer .container-fluid{
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+  }
+  footer .container-fluid .row .col-sm h2{
+    color:cornsilk;
+  }
+  footer .container-fluid .row .col-sm h6{
+    color:cornsilk;
+  }
+  
+  .sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    background-color: black;
+  }
+  
+  .sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: None;
+    font-size: 20px;
+    color: white;
+    display: block;
+    line-height: 70px;
+  }
+  .sidenav a:hover{
+    color:aqua;
+  }
+  .sidenav .closebtn {
+  position: absolute;
+  top: 30;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+span{
+font-size:20px;
+cursor:pointer;
+margin-left: -55px;
+}
+  @media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+.carousel .carousel-inner .carousel-item img{
+width: 100%;
+overflow: hidden;
+}
+.carousel-caption{
+margin-bottom: 16in; 
+margin-right: -20cm;
+}
+.carousel-caption h3{
+font-family: 'Playfair Display',serif; 
+font-size: 70px; 
+font-weight: 400;
+color: black; 
+margin-bottom: 20px;
+}
+.carousel-caption h5{
+font-family: 'Poppins-Regular'; 
+color: black; 
+font-size: 50px; 
+font-weight: 100; 
+margin-bottom: 20px;
+}
+.btn-info{
+width: 4cm; 
+border-top-left-radius: 35px; 
+border-bottom-left-radius: 35px; 
+border-top-right-radius: 35px; 
+border-bottom-right-radius: 35px;
+}
+#btn-info{
+width: 4cm; 
+border-top-left-radius: 35px; 
+border-bottom-left-radius: 35px; 
+border-top-right-radius: 35px; 
+border-bottom-right-radius: 35px;
+}
+.carousel{
+height: 800px; 
+overflow: hidden;
+}
+.pointer{
+cursor: pointer;
+}
+#margin-top-70{
+margin-top: 70px;
+}
+.col-lg-4 .card{
+height: 300px; 
+width: 400px;
+}
+.col-lg-4 .card-img-top{
+width: 100%; 
+overflow:hidden;
+}
+.card-img-overlay .card-title{
+font-family: 'Original Surfer', cursive; 
+font-size: 26px; 
+margin-right: 5px;
+}
+.overlay{
+text-decoration: none; font-size: 24px;
+}
+nav{
+border-bottom-width: thin;
+border-bottom-style: solid;
+border-color: rgba(0,0,0,0.06);
+/* background-color: rgba(255, 251, 251, 0.752); */
+}
+.col-sm-3 .card{
+background-color: white;
+box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+}
+.col-sm-3 .card img{
+width: 100%; 
+height: 350px; 
+overflow: hidden;
+}
+.overlay{
+position: absolute;
+width: 100%;
+height: 0;
+opacity: 0;
+transition: .5s ease-out;
+background-color:transparent;
+}
+.card:hover .overlay{
+opacity: 1;
+}
+.col-sm-3{
+margin-top: 50px;
+}
+#m-t-m-b{
+margin-top: 90px; 
+margin-bottom: 50px;
+}
+
+.tab-content{
+margin-top: 50px;
+margin-bottom: 100px;
+}
+.card-text{
+margin-left: 10px;
+}
+.card-text h4{
+font-family: 'Slabo 27px', serif; 
+opacity: 0.85;
+font-size: 20px
+}
+.card-text h5{
+font-family:'Ubuntu';
+opacity: 0.55; 
+font-size: 18.3px;
+}
+.btn-dark{
+color:white; 
+width:5cm; 
+margin-left: 20px; 
+margin-bottom:8px;
+}
+.container-fluid .nav-tabs{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+border: none;
+}
+.nav-tabs .nav-item a{
+font-family: Arial, sans-serif;
+font-size: 15px;
+color: #666666
+}
+.nav-tabs .nav-item a:hover{
+text-decoration: underline;
+transition: all 0.7s ease;
+}
+.nav-tabs .nav-item{
+margin: 0px 15px;
+}
+#margin{
+margin-left: 4cm;
+}
+#margin-top{
+margin-top: 50px;
+}
+.margin{
+margin: 4cm;
+}
+.zoom{
+transition: transform .2s;
+}
+.zoom:hover{
+-ms-transform: scale(1.5); /* IE 9 */
+-webkit-transform: scale(1.5); /* Safari 3-8 */
+transform: scale(1.2); 
+}
+footer h4{
+font-family: 'Montserrat', sans-serif;
+color: white;
+}
+footer .container-fluid .col-sm a{
+font-family: 'Poppins',serif;
+line-height: 4.923;
+text-decoration: none;
+color: #b2b2b2;
+}
+footer .container-fluid .col-sm a:hover{
+color: white;
+transition: all 0.5s;
+}
+.section-img{
+  background: url("aboutus4.jpg");
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  overflow-x: hidden;
+  height:200px;
+  opacity: 0.6599;
+}
+section h2{
+  margin-top: 3cm;
+  text-align:center;
+  font-family: 'Poppins-Bold',Arial, Helvetica, sans-serif;
+  font-weight:750;
+  font-size: 50px;
+  line-height: 1.1;
+  color: white;
+  opacity: 1;
+}
+section h3{
+  text-align:center;
+  font-family: 'Poppins-Bold',sans-serif;
+  font-weight:600;
+  font-size: 50px;
+  line-height: 1.1;
+  word-spacing: 3px;
+}
+section .row .col-md-6 p{
+  font-family: 'Poppins',serif;
+  font-size: 14px;
+  line-height: 1.7857;
+  margin-left: 3cm;
+}
+.col-md{
+  margin-left: 2cm;
+}
